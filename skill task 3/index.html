@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aqua Nebula Tic Tac Toe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Tic Tac Toe</h1>
+    <p class="subtitle">Aqua Nebula Edition</p>
+
+    <!-- Mode Selection -->
+
+    <div class="controls">
+
+        <select id="mode">
+            <option value="pvp">👥 Player vs Player</option>
+            <option value="ai">🤖 Player vs Computer</option>
+        </select>
+
+        <button id="restart">🔄 Restart</button>
+        <button id="reset">🏆 Reset Score</button>
+
+    </div>
+
+    <!-- Score -->
+
+    <div class="scoreboard">
+
+        <div class="card">
+            <h3>Player X</h3>
+            <h2 id="scoreX">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Draw</h3>
+            <h2 id="draw">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Player O</h3>
+            <h2 id="scoreO">0</h2>
+        </div>
+
+    </div>
+
+    <!-- Turn -->
+
+    <h2 id="status">Player X Turn</h2>
+
+    <!-- Game Board -->
+
+    <div class="board" id="board">
+
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="card">
+            <h4>Total Games</h4>
+            <p id="games">0</p>
+        </div>
+
+        <div class="card">
+            <h4>Win Rate</h4>
+            <p id="rate">0%</p>
+        </div>
+
+        <div class="card">
+            <h4>Streak</h4>
+            <p id="streak">0</p>
+        </div>
+
+    </div>
+
+    <!-- Move History -->
+
+    <div class="history">
+
+        <h3>Move History</h3>
+
+        <ul id="history"></ul>
+
+    </div>
+
+</div>
+
+<!-- Winner Popup -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <h2 id="winnerText">Winner</h2>
+
+        <button onclick="closePopup()">
+            Play Again
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Confetti -->
+
+<div id="confetti"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
